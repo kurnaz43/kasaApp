@@ -1,0 +1,7 @@
+{
+  "name": "AppKassa",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
