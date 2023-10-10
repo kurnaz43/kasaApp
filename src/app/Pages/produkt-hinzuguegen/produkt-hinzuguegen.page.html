@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>produktHinzuguegen</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        Yeni ürün ekle
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Ürün ismi</ion-label>
+        <ion-input [(ngModel)]="prodName" name="produktName"></ion-input>
+      </ion-item>
+      <br>
+      <ion-item>
+        <ion-label position="floating">Ürün gelis fiyati</ion-label>
+        <ion-input [(ngModel)]="ek" name="ev" type="number" pattern="[0-9]*" inputmode="numeric"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Ürün satis fiyati</ion-label>
+        <ion-input [(ngModel)]="vk" name="vk" type="number" pattern="[0-9]*" inputmode="numeric"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Depoda mevcut olan miktar</ion-label>
+        <ion-input [(ngModel)]="bestand" name="bestand" type="number" pattern="[0-9]*" inputmode="numeric"></ion-input>
+      </ion-item>
+      
+      
+    </ion-card-content>
+  </ion-card>
+  <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+    <ion-fab-button ion-button (click)="abort()" type="abort" [routerLink]="['/home']">
+      <ion-icon name="trash-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button ion-button (click)="addProd()" type="submit" [routerLink]="['/home']">
+    <ion-icon name="arrow-forward-circle"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+
+
+</ion-content>

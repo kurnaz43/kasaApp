@@ -1,0 +1,114 @@
+
+ <ion-header [translucent]="true">
+  <ion-toolbar>
+    <img slot="start" src="./../../assets/icon/icon512.png" style="width : 10% ; height : 10%" ng-click="nextpage()">
+    <ion-title slot="center">VFIB-Westerholt</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="save()">
+        <ion-icon slot="icon-only" name="save-outline"></ion-icon>
+      </ion-button>
+      <ion-button [routerLink]="['/produkt-hinzuguegen']">
+        <ion-icon slot="icon-only" name="add-outline"></ion-icon>
+      </ion-button>
+      {{gesamtpreis}} €
+      <ion-button [routerLink]="['/warenkorb']">
+        <ion-icon slot="icon-only" name="cart-outline"></ion-icon>
+      </ion-button>
+      <ion-menu-button autoHide="false"></ion-menu-button>
+      <ion-button (click)="onPrintInvoice('component1')">print</ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end"> 
+
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+    <!--
+  
+    <ion-list>
+      <ion-item *ngFor="let item of items">
+        {{ item.name }}
+      </ion-item>
+    </ion-list>
+  -->
+  
+  
+    <ion-grid>
+      <ion-row>
+  
+        <ion-col *ngFor="let produkt of items" sizeXs="12" sizeSm="12" size-md="6" size-lg="4">
+          <ion-card>
+            <ion-grid>
+              <ion-row>
+                <ion-col size="8">
+                  <ion-card-header>
+  
+                    <ion-card-title>
+                      {{produkt.name}}
+                    </ion-card-title>
+                  </ion-card-header>
+                </ion-col>
+                <ion-col size="4">
+                  <ion-img src="./../../assets/icon/{{produkt.getIconName()}}"> </ion-img>
+                </ion-col>
+              </ion-row>
+              <ion-card-content>
+  
+                <ion-row size="12" class="ion-align-self-center">
+                  <ion-col>
+  
+                    Fiyat: {{produkt.verkaufsPreis}} € <br>
+                    Depo: {{produkt.bestand}}
+                  </ion-col>
+                  <ion-col>
+                    Toplam: {{produkt.verkaufsPreis * this.warenkorb.getArtikelAnzahl(produkt)}} € <br>
+  
+                  </ion-col>
+                </ion-row>
+                <ion-row class="ion-align-items-center">
+  
+                  <ion-col size="4" class="ion-align-self-center">
+                    <ion-button size="large" color="danger" fill="clear" (click)="decreaseCartItem(produkt)">
+                      <ion-icon name="remove-circle" slot="icon-only"></ion-icon>
+                    </ion-button>
+                  </ion-col>
+  
+                  <ion-col size="4" class="ion-align-self-center">
+                    {{ this.warenkorb.getArtikelAnzahl(produkt) }}
+                  </ion-col>
+  
+                  <ion-col size="4" class="ion-align-self-center">
+                    <ion-button size="large" color="success" fill="clear" (click)="increaseCartItem(produkt)">
+                      <ion-icon name="add-circle" slot="icon-only"></ion-icon>
+                    </ion-button>
+                  </ion-col>
+  
+                </ion-row>
+                <!--
+  
+    <ion-fab vertical="top" horizontal="end" slot="fixed">
+      <ion-fab-button ion-button (click)="abort()" type="abort" [routerLink]="['/home']">
+        <ion-icon name="add-circle-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button ion-button (click)="abort()" type="abort" [routerLink]="['/home']">
+        <ion-icon name="remove-circle-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+    
+  -->
+              </ion-card-content>
+            </ion-grid>
+          </ion-card>
+        </ion-col>
+  
+      </ion-row>
+    </ion-grid>
+  

@@ -1,0 +1,127 @@
+<ion-header>
+  <ion-toolbar>
+    <img slot="start" src="./../../assets/icon/icon512.png" style="width : 10% ; height : 10%" ng-click="nextpage()">
+    <ion-title slot="center">VFIB-Westerholt</ion-title>
+
+    <ion-buttons slot="end">
+
+      <ion-button (click)="print()">
+        <ion-icon slot="icon-only" name="newspaper-outline"></ion-icon>
+      </ion-button>
+      <ion-button (click)="printWertmarke()">
+        <ion-icon slot="icon-only" name="newspaper"></ion-icon>
+      </ion-button>
+
+    </ion-buttons>
+
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-content">
+  <ion-card class="ion-card">
+    <ion-card-header>
+      <ion-title>
+        Fiş
+      </ion-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+
+        <ion-item>
+          <ion-input label="Outline input" label-placement="floating" fill="outline" placeholder="Isim"
+            [value]="orderName" (ionInput)="onOrderName($event)"></ion-input>
+        </ion-item>
+
+        <ion-item *ngFor="let produkt of warenkorbInhalt">
+          {{produkt[1]}} x
+          {{produkt[0].getName()}}
+          <ion-label slot="end">{{produkt[1]*produkt[0].getPreis()}}€</ion-label>
+        </ion-item>
+
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-grid>
+    <ion-row>
+
+      <ion-col size-xs="12" size-sm="12" size-md="4" size-lg="4">
+        <ion-card>
+          <ion-item>
+            Toplam tutar
+            <ion-label slot="end">{{this.gesamtpreis}}€</ion-label>
+          </ion-item>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size-xs="12" size-sm="12" size-md="4" size-lg="4">
+        <ion-card>
+          <ion-item>
+            Alinan
+            <ion-label slot="end">{{this.bekommen}}€</ion-label>
+          </ion-item>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size-xs="12" size-sm="12" size-md="4" size-lg="4">
+        <ion-card>
+          <ion-item>
+            Para Üstü
+            <ion-label slot="end">{{this.ruckgeld}}€</ion-label>
+          </ion-item>
+        </ion-card>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+  <ion-card class="ion-card">
+    <ion-card-header>
+      <ion-title>
+        Alinan parayi giriniz!
+      </ion-title>
+    </ion-card-header>
+    <div style="height: 100%; display: flex; align-items: center; justify-content: center;">
+
+      <ion-card-content>
+
+        <button (click)="revieveMoney(200)" block>
+          <img src="./../../assets/icon/200.jpg" style="width : 125px ; height : 75px">
+        </button>
+
+        <button (click)="revieveMoney(100)" block>
+          <img src="./../../assets/icon/100.jpg" style="width : 125px ; height : 75px">
+        </button>
+
+        <button (click)="revieveMoney(50)" block>
+          <img src="./../../assets/icon/50.jpg" style="width : 125px ; height : 75px">
+        </button>
+
+        <button (click)="revieveMoney(20)" block>
+          <img src="./../../assets/icon/20.jpg" style="width : 125px ; height : 75px">
+        </button>
+
+        <button (click)="revieveMoney(10)" block>
+          <img src="./../../assets/icon/10.jpg" style="width : 125px ; height : 75px">
+        </button>
+
+        <button (click)="revieveMoney(5)" block>
+          <img src="./../../assets/icon/5.jpg" style="width : 125px ; height : 75px">
+        </button>
+
+      </ion-card-content>
+    </div>
+  </ion-card>
+
+  <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+    <ion-fab-button ion-button [routerLink]="['/home']">
+      <ion-icon name="arrow-back-circle"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button ion-button (click)="sold()" [routerLink]="['/home']">
+      <ion-icon name="arrow-forward-circle"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

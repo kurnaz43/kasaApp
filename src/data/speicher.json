@@ -1,0 +1,52 @@
+{
+    "produkte": [
+        {
+            "name": "Cola",
+            "verkaufsPreis": 1.5,
+            "einkaufPreis": 0,
+            "bestand": 1,
+            "icon": "Cola.png"
+        }, {
+            "name": "Fanta",
+            "verkaufsPreis": 1.5,
+            "einkaufPreis": 0,
+            "bestand": 1,
+            "icon": "Soda.png"
+        },
+        {
+            "name": "Burger",
+            "verkaufsPreis": 9,
+            "einkaufPreis": 0,
+            "bestand": 43,
+            "icon": "Burger.png"
+        },
+        {
+            "name": "Doener",
+            "verkaufsPreis": 6,
+            "einkaufPreis": 0,
+            "bestand": 20,
+            "icon": "DonerKebab.png"
+        },
+        {
+            "name": "Döner dürüm",
+            "verkaufsPreis": 6,
+            "einkaufPreis": 0,
+            "bestand": 3,
+            "icon": "KebabDurum.png"
+        },
+        {
+            "name": "Pommes Groß",
+            "verkaufsPreis": 2.5,
+            "einkaufPreis": 0,
+            "bestand": 75,       
+            "icon": "Frenchfries.png"
+        },
+        {
+            "name": "Pommes Klein",
+            "verkaufsPreis": 2,
+            "einkaufPreis": 0,
+            "bestand": 75,       
+            "icon": "Frenchfries.png"
+        }
+    ]
+}
