@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Artikel } from 'src/POJO/Artikel';
 import { AppRoutingModule } from '../app-routing.module';
 import { ExporterService } from './exporter.service';
+import { Kunde } from 'src/POJO/Kunde';
 
 @Injectable({
   providedIn: 'root'
@@ -27,17 +28,19 @@ export class ArchivService {
     });
     this.exporter.print();
   }
+  public sicherheitsSpeicher(kunde: Kunde){
+    
 
+  }
   public save() {
-    let archivArray = new Array<[string, string, string, string, string, string]>(["name", "ek", "vk", "anzahl", "Umsatz", "Gewinn"]);
+    let archivArray = new Array<[string, string, string, string]>(["name", "vk", "anzahl", "Umsatz"]);
     Array.from(this.archive.entries()).forEach(pair => {
       archivArray.push([
         pair[0].getName(), //name
-        pair[0].getEk().toString(), // ek 
         pair[0].getPreis().toString(), // vk
         pair[1].toString(), // anzahl
-        (pair[0].getPreis() * pair[1]).toString(), //umsatz = vk * anzahl
-        ((pair[0].getPreis() * pair[1]) - (pair[1]*pair[0].getEk())).toString()]); //gewinn= umsatz - anzahl * ek
+        (pair[0].getPreis() * pair[1]).toString() //umsatz = vk * anzahl
+      ]); //gewinn= umsatz - anzahl * ek
     })
     console.log('Archiviert: archive: ', this.archive.entries());
     console.log('Archiviert: archivArray: ', archivArray.entries());

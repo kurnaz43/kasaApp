@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Hesaplar</ion-title>
+    <ion-buttons slot="end">
+
+      <ion-button [routerLink]="['/kunde-hinzufuegen']">
+        <ion-icon slot="icon-only" name="add-outline"></ion-icon>
+      </ion-button>
+      <ion-button (click)="loadData()">
+        <ion-icon slot="icon-only" name="refresh-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-searchbar (ionInput)="handleInput($event)" show-cancel-button="focus" placeholder="Isim"></ion-searchbar>
+      <ion-list>
+        <ion-item [button]="true" *ngFor="let kunde of results" [routerLink]="['/kunden-config']" (click)="setKundeForConfiguration(kunde)">
+          <!-- <ion-icon color="warning" slot="start" name="list-circle" size="large"></ion-icon> -->
+          <ion-label>{{ kunde.getVorName() }} {{ kunde.getNachName() }}</ion-label>
+          <ion-note slot="end">{{ kunde.getAnzahlOffenerArtikel() }}</ion-note>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+    <ion-fab-button ion-button [routerLink]="['/home']">
+      <ion-icon name="arrow-back-circle"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

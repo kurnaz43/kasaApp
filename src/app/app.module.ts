@@ -6,16 +6,16 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { WarenkorbPipe } from './warenkorb.pipe';
 import { NgxElectronModule } from 'ngx-electron';
 import { Printer, PrintOptions } from '@awesome-cordova-plugins/printer/ngx';
 import { NgxPrintModule } from 'ngx-print';
 import { ThermalPrintModule } from 'ng-thermal-print';
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
+
 const config: SocketIoConfig = { url: 'http://localhost:3001', options: {} };
 
 @NgModule({
-  declarations: [AppComponent, WarenkorbPipe],
+  declarations: [AppComponent],
   imports: [BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,

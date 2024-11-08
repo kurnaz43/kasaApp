@@ -1,52 +1,207 @@
 {
     "produkte": [
         {
-            "name": "Cola",
-            "verkaufsPreis": 1.5,
+            "name": "Ekmek arasi Doner",
+            "verkaufsPreis": 7,
             "einkaufPreis": 0,
-            "bestand": 1,
-            "icon": "Cola.png"
-        }, {
-            "name": "Fanta",
-            "verkaufsPreis": 1.5,
-            "einkaufPreis": 0,
-            "bestand": 1,
-            "icon": "Soda.png"
-        },
-        {
-            "name": "Burger",
-            "verkaufsPreis": 9,
-            "einkaufPreis": 0,
-            "bestand": 43,
-            "icon": "Burger.png"
-        },
-        {
-            "name": "Doener",
-            "verkaufsPreis": 6,
-            "einkaufPreis": 0,
-            "bestand": 20,
+            "bestand": 1000,
             "icon": "DonerKebab.png"
         },
         {
-            "name": "Döner dürüm",
-            "verkaufsPreis": 6,
+            "name": "Doner Tabak",
+            "verkaufsPreis": 10,
             "einkaufPreis": 0,
-            "bestand": 3,
+            "bestand": 1000,
+            "icon": "doener-teller.png"
+        },
+        {
+            "name": "Iskender",
+            "verkaufsPreis": 12,
+            "einkaufPreis": 0,
+            "bestand": 1000,
+            "icon": "iskender.png"
+        },
+        {
+            "name": "Doner Durum",
+            "verkaufsPreis": 8,
+            "einkaufPreis": 0,
+            "bestand": 1000,
             "icon": "KebabDurum.png"
         },
         {
-            "name": "Pommes Groß",
-            "verkaufsPreis": 2.5,
+            "name": "Pomm Doner",
+            "verkaufsPreis": 4.5,
             "einkaufPreis": 0,
-            "bestand": 75,       
+            "bestand": 1000,
+            "icon": "pomm-doner.png"
+        },
+        {
+            "name": "Pommes",
+            "verkaufsPreis": 3,
+            "einkaufPreis": 0,
+            "bestand": 1000,
             "icon": "Frenchfries.png"
         },
         {
-            "name": "Pommes Klein",
+            "name": "Adana",
+            "verkaufsPreis": 6.5,
+            "einkaufPreis": 0,
+            "bestand": 1000,
+            "icon": "adana.jpg"
+        },
+        {
+            "name": "Tavuk But",
+            "verkaufsPreis": 6,
+            "einkaufPreis": 0,
+            "bestand": 1000,
+            "icon": "tavuk-budu.jpg"
+        },
+        {
+            "name": "3x Kuzu Prizola",
+            "verkaufsPreis": 10,
+            "einkaufPreis": 0,
+            "bestand": 1000,
+            "icon": "Steak.png"
+        },
+        {
+            "name": "Tavuk Sis Drm",
+            "verkaufsPreis": 6.5,
+            "einkaufPreis": 0,
+            "bestand": 1000,
+            "icon": "TavukSis.jpg"
+        },
+        {
+            "name": "3x Tavuk Prizola",
+            "verkaufsPreis": 6.5,
+            "einkaufPreis": 0,
+            "bestand": 1000,
+            "icon": "TavukPirzola.jpg"
+        },
+        {
+            "name": "Sosis",
+            "verkaufsPreis": 3.5,
+            "einkaufPreis": 0,
+            "bestand": 1000,
+            "icon": "sosis.jpg"
+        },
+        {
+            "name": "Burger",
+            "verkaufsPreis": 7,
+            "einkaufPreis": 0,
+            "bestand": 1000,
+            "icon": "Burger.png"
+        },
+        {
+            "name": "Pasta",
+            "verkaufsPreis": 3,
+            "einkaufPreis": 0,
+            "bestand": 1000,
+            "icon": "cake.webp"
+        },
+        {
+            "name": "Lahmacun Salatali",
+            "verkaufsPreis": 3,
+            "einkaufPreis": 0,
+            "bestand": 1000,
+            "icon": "Lahmacun.webp"
+        },
+        {
+            "name": "Yagli Gozleme",
+            "verkaufsPreis": 4.5,
+            "einkaufPreis": 0,
+            "bestand": 1000,
+            "icon": "gözleme.png"
+        },
+        {
+            "name": "Patatesli yagli Gozleme",
+            "verkaufsPreis": 5,
+            "einkaufPreis": 0,
+            "bestand": 1000,
+            "icon": "gözleme.png"
+        },
+        {
+            "name": "Manti Yogurtlu",
             "verkaufsPreis": 2,
             "einkaufPreis": 0,
-            "bestand": 75,       
-            "icon": "Frenchfries.png"
+            "bestand": 1000,
+            "icon": "Manti.png"
+        },
+        {
+            "name": "Koz Patlican Salatasi",
+            "verkaufsPreis": 1,
+            "einkaufPreis": 0,
+            "bestand": 1000,
+            "icon": "Patlican.webp"
+        },
+        {
+            "name": "Pamuk Seker",
+            "verkaufsPreis": 1.5,
+            "einkaufPreis": 0,
+            "bestand": 1000,
+            "icon": "zuckerwatte.webp"
+        },
+        {
+            "name": "Waffel Ohne Beilage",
+            "verkaufsPreis": 2.5,
+            "einkaufPreis": 0,
+            "bestand": 1000,
+            "icon": "waffel.webp"
+        },
+        {
+            "name": "Waffel mit Beilage",
+            "verkaufsPreis": 3.5,
+            "einkaufPreis": 0,
+            "bestand": 1000,
+            "icon": "WaffelBeilage.jpg"
+        },
+        {
+            "name": "Mesrubat mit Pfand",
+            "verkaufsPreis": 2.25,
+            "einkaufPreis": 0,
+            "bestand": 1000,
+            "icon": "dosen.jpg"
+        },
+        {
+            "name": "Su",
+            "verkaufsPreis": 1.5,
+            "einkaufPreis": 0,
+            "bestand": 1000,
+            "icon": "wasser.webp"
+        },
+        {
+            "name": "Yayik Ayran",
+            "verkaufsPreis": 2,
+            "einkaufPreis": 0,
+            "bestand": 1000,
+            "icon": "ayran.png"
+        },
+        {
+            "name": "Turk Kahvesi",
+            "verkaufsPreis": 2,
+            "einkaufPreis": 0,
+            "bestand": 1000,
+            "icon": "kahveTR.jpg"
+        },
+        {
+            "name": "Icli Kofte",
+            "verkaufsPreis": 2,
+            "einkaufPreis": 0,
+            "bestand": 1000,
+            "icon": "icliköfte.jpg"
+        },
+        {
+            "name": "5x Sarma",
+            "verkaufsPreis": 1,
+            "einkaufPreis": 0,
+            "bestand": 1000,
+            "icon": "sarma.webp"
+        },
+        {
+            "name": "5x Beyaz Lahana Sarmasi",
+            "verkaufsPreis": 1,
+            "einkaufPreis": 0,
+            "bestand": 1000,
+            "icon": "lahanaSarmasi.jpg"
         }
     ]
 }

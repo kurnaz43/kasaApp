@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import * as XLSX from 'xlsx';
+import { File } from '@ionic-native/file/ngx';
 @Injectable({
   providedIn: 'root'
 })
@@ -18,5 +19,4 @@ export class ExporterService {
   print() {
 
   }
-
 }

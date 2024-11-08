@@ -22,6 +22,18 @@ const routes: Routes = [
   {
     path: 'chat-room',
     loadChildren: () => import('./Pages/chat-room/chat-room.module').then( m => m.ChatRoomPageModule)
+  },
+  {
+    path: 'offene-rechnungen',
+    loadChildren: () => import('./Pages/offene-rechnungen/offene-rechnungen.module').then( m => m.OffeneRechnungenPageModule)
+  },
+  {
+    path: 'kunde-hinzufuegen',
+    loadChildren: () => import('./Pages/kunde-hinzufuegen/kunde-hinzufuegen.module').then( m => m.KundeHinzufuegenPageModule)
+  },
+  {
+    path: 'kunden-config',
+    loadChildren: () => import('./Pages/kunden-config/kunden-config.module').then( m => m.KundenConfigPageModule)
   }
 ];
 

@@ -3,6 +3,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { Artikel } from 'src/POJO/Artikel';
 import { ArchivService } from './archiv.service';
 import { ProduktAdderService } from './produkt-adder.service';
+import { Kunde } from 'src/POJO/Kunde';
 
 @Injectable({
   providedIn: 'root'
@@ -45,13 +46,23 @@ export class WarenkorbService {
     //  console.log('Shopping cart updated:Add: ', this.warenkorb.entries());
   }
   //export to KassenbonService
-  private formatKassenbon(): string{
-    let formatierterKassenbonArtikel ="";
-    this.getWarenkorb().forEach(function(number, artikel){
+  private formatKassenbon(): string {
+    let formatierterKassenbonArtikel = "";
+    this.getWarenkorb().forEach(function (number, artikel) {
       formatierterKassenbonArtikel += number + " x " + artikel.getName() + " = " + number * artikel.getPreis() + " Euro \n";
     })
     console.log("kassenbon: ", formatierterKassenbonArtikel);
-    
+
+    return formatierterKassenbonArtikel;
+  }
+  //export to KassenbonService
+  public formatListeBackup(warenkorb: Map<Artikel,number>): string {
+    let formatierterKassenbonArtikel = "";
+    this.getWarenkorb().forEach(function (number, artikel) {
+      formatierterKassenbonArtikel += number + " x " + artikel.getName() + " = " + number * artikel.getPreis() + " Euro \n";
+    })
+    console.log("kassenbon: ", formatierterKassenbonArtikel);
+
     return formatierterKassenbonArtikel;
   }
 

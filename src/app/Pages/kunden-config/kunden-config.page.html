@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Müşteri Bilgileri ve Hesap</ion-title>
+    <ion-buttons slot="center">
+
+      <ion-button (click)="print()">
+        <ion-icon slot="icon-only" name="newspaper-outline"></ion-icon>
+      </ion-button>
+
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        {{kunde.getVorName()}}
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>Isim:{{kunde.getVorName()}}</ion-item>
+
+        <ion-item>Soy Isim:{{kunde.getNachName()}}</ion-item>
+
+        <!-- <ion-item-sliding> -->
+        <ion-item [button]="true" *ngFor="let kunde of kunde.getOffeneRechnungen() | keyvalue">
+
+          <ion-label>{{kunde.value}} x {{kunde.key.getName()}} </ion-label>
+
+        </ion-item>
+        <!-- </ion-item-sliding> -->
+
+
+
+      </ion-list>
+
+    </ion-card-content>
+
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        Borc Ödeme
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          {{kunde.getVorName()}}'nin ödemesi gereken meblag': {{kunde.calcSchulden()}}€
+        </ion-item>
+        <ion-input>Alinan</ion-input>
+        <ion-button (click)="begleichtRechnungen()">Ödendi</ion-button>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+    <ion-fab-button ion-button (click)="abort()" type="abort" [routerLink]="['/offene-rechnungen']">
+      <ion-icon name="arrow-back-circle"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
